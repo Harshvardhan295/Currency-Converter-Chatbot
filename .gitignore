@@ -1,0 +1,50 @@
+# -----------------------
+# Python cache files
+# -----------------------
+__pycache__/
+*.py[cod]
+*$py.class
+
+# -----------------------
+# Virtual environments
+# -----------------------
+venv/
+.venv/
+env/
+ENV/
+virtualenv/
+.ENV/
+
+# -----------------------
+# Environment variables
+# -----------------------
+.env
+.env.*
+*.env
+
+# -----------------------
+# Python build / dist
+# -----------------------
+build/
+dist/
+*.egg-info/
+
+# -----------------------
+# Logs & temp files
+# -----------------------
+*.log
+*.tmp
+
+# -----------------------
+# IDE / Editor settings
+# -----------------------
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# -----------------------
+# OS-specific files
+# -----------------------
+.DS_Store
+Thumbs.db
