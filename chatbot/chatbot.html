@@ -3,15 +3,141 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Currency Converter Chatbot</title>
-    <script src="https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js?v=1"></script>
+    <title>Moneta - Currency Converter Chatbot</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary-orange: #ff7a00; /* Vibrant Orange */
+            --light-orange: #fff5eb;   /* Soft Orange Background */
+            --deep-orange: #e66e00;    /* Darker Orange for contrast */
+            --pure-white: #ffffff;
+            --text-dark: #2d2d2d;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: var(--pure-white);
+            background-image: radial-gradient(circle at top right, var(--light-orange) 0%, var(--pure-white) 70%);
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--text-dark);
+            overflow: hidden;
+        }
+
+        .container {
+            text-align: center;
+            max-width: 650px;
+            padding: 2rem;
+            animation: slideUp 0.8s ease-out;
+        }
+
+        .logo-icon {
+            font-size: 3.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        h1 {
+            font-size: 3.5rem;
+            font-weight: 800;
+            margin: 0;
+            letter-spacing: -1px;
+            color: var(--primary-orange);
+        }
+
+        p {
+            font-size: 1.15rem;
+            line-height: 1.6;
+            color: #555;
+            margin-bottom: 2.5rem;
+            font-weight: 400;
+        }
+
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .feature-card {
+            background: var(--pure-white);
+            border: 2px solid var(--light-orange);
+            padding: 1.5rem 1rem;
+            border-radius: 20px;
+            transition: all 0.3s ease;
+        }
+
+        .feature-card:hover {
+            border-color: var(--primary-orange);
+            transform: translateY(-5px);
+        }
+
+        .feature-card span {
+            display: block;
+            font-weight: 700;
+            color: var(--primary-orange);
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* Dialogflow Messenger Theming */
+        df-messenger {
+            --df-messenger-button-titlebar-color: var(--primary-orange);
+            --df-messenger-chat-background-color: var(--pure-white);
+            --df-messenger-font-color: var(--text-dark);
+            --df-messenger-send-icon: var(--primary-orange);
+            --df-messenger-user-message: var(--light-orange);
+            --df-messenger-input-placeholder-font-color: #999;
+            --df-messenger-input-font-color: var(--text-dark);
+        }
+
+        @keyframes slideUp {
+            from { opacity: 0; transform: translateY(40px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Mobile Optimization */
+        @media (max-width: 600px) {
+            h1 { font-size: 2.5rem; }
+            .feature-grid { grid-template-columns: 1fr; gap: 0.8rem; }
+            .container { padding: 1.5rem; }
+        }
+    </style>
 </head>
 <body>
+
+    <div class="container">
+        <div class="logo-icon">🔸</div>
+        <h1>Moneta</h1>
+        <p>Expert currency conversion simplified. Talk to our AI assistant for instant, precise exchange rates across the globe.</p>
+        
+        <div class="feature-grid">
+            <div class="feature-card">
+                <span>Secure</span>
+            </div>
+            <div class="feature-card">
+                <span>Real-Time</span>
+            </div>
+            <div class="feature-card">
+                <span>Accurate</span>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js?v=1"></script>
     <df-messenger
       intent="WELCOME"
-      chat-title="Moneta"
+      chat-title="Moneta | Currency Bot"
       agent-id="9c9a6537-f0b5-4d64-be97-a3625a8f4ce2"
       language-code="en"
     ></df-messenger>
+
 </body>
 </html>
