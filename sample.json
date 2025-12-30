@@ -1,8 +1,0 @@
-{
-  "queryResult": {
-    "parameters": {
-      "unit-currency": [{"currency": "USD", "amount": 20}],
-      "currency-name": ["EUR"]
-    }
-  }
-}
