@@ -3,8 +3,11 @@ import requests
 
 app = Flask(__name__)
 
-@app.route('/', methods=['POST'])
+@app.route('/', methods=['GET', 'POST']) # Add 'GET' here
 def index():
+    if request.method == 'GET':
+        return "Webhook server is running. Use Dialogflow or a POST request to interact."
+    
     data = request.get_json()
     
     source_currency = data['queryResult']['parameters']['unit-currency'][0]['currency']
